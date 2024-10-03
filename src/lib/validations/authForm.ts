@@ -1,0 +1,3 @@
+const fromObject = {};
+
+export { fromObject };

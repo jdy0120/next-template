@@ -1,5 +1,5 @@
 import { AxiosResponse, InternalAxiosRequestConfig } from "axios";
-import { LoginResponse } from "../../models/v1/auth/auth.types";
+import { LoginResponse } from "../../types/models/v1/auth/auth.types";
 import { Get } from "./request";
 
 // Request interceptor

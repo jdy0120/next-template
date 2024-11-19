@@ -13,7 +13,8 @@
     "start:stg": "NEXT_NODE_ENV=staging next build && next start",
     "start:prod": "NEXT_NODE_ENV=production next build && next start",
     "preview": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest --watch"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
@@ -32,11 +33,16 @@
     "redux-persist": "^6.0.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
     "@types/axios": "^0.14.0",
+    "@types/jest": "^29.5.14",
     "@types/node": "^20",
     "@types/prettier": "^3.0.0",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "typescript": "^5"
   }
 }

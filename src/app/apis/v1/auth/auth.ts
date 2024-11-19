@@ -2,7 +2,7 @@ import { Post } from "../../../../lib/axios/request";
 import {
   LoginRequest,
   LoginResponse,
-} from "../../../../models/v1/auth/auth.types";
+} from "../../../../types/models/v1/auth/auth.types";
 
 export const login = async (data: LoginRequest) => {
   try {

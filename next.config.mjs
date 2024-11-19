@@ -3,7 +3,7 @@
 import dotenv from "dotenv";
 
 dotenv.config({
-  path: `./env/.env.${process.env.MODE}`,
+  path: `./envs/.env.${process.env.MODE}`,
 });
 
 const nextConfig = {

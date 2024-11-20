@@ -1,11 +1,5 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import { Provider } from "react-redux";
-import { configureStore } from "@reduxjs/toolkit";
-
-const mockStore = configureStore({
-  reducer: {},
-});
 
 // Next.js App Router 테스트를 위한 모킹
 jest.mock("next/navigation", () => ({
@@ -22,10 +16,6 @@ jest.mock("next/navigation", () => ({
 
 describe("LoginPage", () => {
   it("renders a login page", () => {
-    render(
-      <Provider store={mockStore}>
-        <></>
-      </Provider>
-    );
+    render(<></>);
   });
 });

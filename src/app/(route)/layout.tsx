@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import ReactQueryProvider from "../../lib/providers/ReactQueryProvider";
-import StoreProvider from "../../lib/providers/ReduxStoreProvider";
-import StitchesProvider from "../../lib/providers/StitchesProvider";
+import EmotionTheme from "../../lib/providers/EmotionTheme";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -31,11 +30,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable}`}
         suppressHydrationWarning
       >
-        <StitchesProvider>
-          <ReactQueryProvider>
-            <StoreProvider>{children}</StoreProvider>
-          </ReactQueryProvider>
-        </StitchesProvider>
+        <ReactQueryProvider>
+          <EmotionTheme>{children}</EmotionTheme>
+        </ReactQueryProvider>
       </body>
     </html>
   );

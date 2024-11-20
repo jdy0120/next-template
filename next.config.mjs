@@ -3,7 +3,7 @@
 import dotenv from "dotenv";
 
 dotenv.config({
-  path: `./envs/.env.${process.env.MODE}`,
+  path: `./.env.${process.env.MODE}`,
 });
 
 const nextConfig = {
@@ -17,17 +17,6 @@ const nextConfig = {
       use: ["@svgr/webpack"],
     });
     return config;
-  },
-  rewrites: async () => {
-    return [
-      {
-        source: "/:path*",
-        destination: "https://stg.the-dive.io/admin/api/:path*",
-      },
-    ];
-  },
-  headers: {
-    "Access-Control-Allow-Origin": "*",
   },
 };
 

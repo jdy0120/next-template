@@ -1,0 +1,10 @@
+services:
+  frontend:
+    build:
+      context: ../../
+      dockerfile: ./ci/dockerfiles/Dockerfile
+      target: development
+    volumes:
+      - ../../src:/usr/src/app/src
+    ports:
+      - ${APP_DOCKER_HOST_PORT}:${PORT}

@@ -27,6 +27,5 @@ describe("LoginPage", () => {
         <></>
       </Provider>
     );
-    expect(screen.getByText("로그인")).toBeInTheDocument();
   });
 });

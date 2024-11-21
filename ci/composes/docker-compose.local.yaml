@@ -8,3 +8,5 @@ services:
       - ../../src:/usr/src/app/src
     ports:
       - ${APP_DOCKER_HOST_PORT}:${PORT}
+    environment:
+      - PORT=${PORT}

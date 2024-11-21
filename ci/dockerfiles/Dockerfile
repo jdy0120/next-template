@@ -10,7 +10,7 @@ RUN apk --no-cache --virtual build-dependencies \
     && apk del build-dependencies
 COPY . .
 RUN npm install
-CMD npm run dev:dev -- -p ${PORT}
+CMD ["npm", "run", "dev:dev"]
 
 
 FROM base as production

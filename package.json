@@ -14,7 +14,7 @@
     "start:prod": "NEXT_NODE_ENV=production next build && next start",
     "preview": "next start",
     "lint": "next lint",
-    "test": "jest --watch"
+    "test": "jest --watchAll"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",

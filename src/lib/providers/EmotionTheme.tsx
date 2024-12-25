@@ -5,6 +5,7 @@ import { Theme, ThemeProvider } from "@emotion/react";
 import { App, ConfigProvider } from "antd";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { theme as emotionTheme } from "../../styles/themes/theme";
+import GlobalStyle from "../../styles/themes/global";
 
 interface EmotionThemeProviderProps {
   children: React.ReactNode;
@@ -132,7 +133,10 @@ const EmotionThemeProvider = ({
         }}
       >
         <App>
-          <AntdRegistry>{children}</AntdRegistry>
+          <AntdRegistry>
+            <GlobalStyle />
+            {children}
+          </AntdRegistry>
         </App>
       </ConfigProvider>
     </ThemeProvider>

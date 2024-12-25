@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin();
 
 import dotenv from "dotenv";
 
 dotenv.config({
-  path: `./.env.${process.env.MODE}`,
+  path: `./envs/.env.${process.env.NODE_ENV}`,
 });
 
 const nextConfig = {
@@ -20,4 +23,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

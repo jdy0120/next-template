@@ -1,6 +1,19 @@
 import "@emotion/react";
 
-interface Colors {
+interface Palette {
+  bg: string;
+  bgHover: string;
+  border: string;
+  borderHover: string;
+  hover: string;
+  default: string;
+  active: string;
+  textHover: string;
+  text: string;
+  textActive: string;
+}
+
+interface Gradient {
   50: string;
   100: string;
   200: string;
@@ -13,7 +26,7 @@ interface Colors {
   900: string;
 }
 
-interface White {
+interface MonoColor {
   default: string;
   info: string;
 }
@@ -21,9 +34,10 @@ interface White {
 declare module "@emotion/react" {
   export interface Theme {
     colors: {
-      primary: string;
-      white: White;
-      gray: Colors;
+      primary: Palette;
+      white: MonoColor;
+      black: string;
+      gray: Gradient;
       negative: string;
     };
   }

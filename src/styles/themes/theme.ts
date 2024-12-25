@@ -1,10 +1,22 @@
 const theme = {
   colors: {
-    primary: "#2656F6",
+    primary: {
+      bg: "#f0f6ff",
+      bgHover: "#c9ddff",
+      border: "#a1c0ff",
+      borderHover: "#78a0ff",
+      hover: "#4f7eff",
+      default: "#2656f6",
+      active: "#153acf",
+      textHover: "#4f7eff",
+      text: "#2656f6",
+      textActive: "#153acf",
+    },
     white: {
       default: "#FFFFFF",
       info: "#2656F6",
     },
+    black: "#000000",
     negative: "#F21724",
     gray: {
       50: "#F9FAFB",
@@ -21,8 +33,4 @@ const theme = {
   },
 };
 
-const breakPoints = {
-  mobile: "768px",
-};
-
-export { theme, breakPoints };
+export { theme };

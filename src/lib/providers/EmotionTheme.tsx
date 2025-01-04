@@ -3,7 +3,6 @@
 import React from "react";
 import { Theme, ThemeProvider } from "@emotion/react";
 import { App, ConfigProvider } from "antd";
-import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { theme as emotionTheme } from "../../styles/themes/theme";
 import GlobalStyle from "../../styles/themes/global";
 
@@ -133,10 +132,8 @@ const EmotionThemeProvider = ({
         }}
       >
         <App>
-          <AntdRegistry>
-            <GlobalStyle />
-            {children}
-          </AntdRegistry>
+          <GlobalStyle />
+          {children}
         </App>
       </ConfigProvider>
     </ThemeProvider>

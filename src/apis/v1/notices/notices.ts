@@ -1,4 +1,4 @@
-import { Post } from "../../../../lib/axios/request";
+import { Post } from "../../../lib/axios/request";
 
 const createNotice = async () => {
   try {

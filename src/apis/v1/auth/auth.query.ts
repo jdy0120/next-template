@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { login } from "./auth";
-import { LoginRequest } from "../../../../types/models/v1/auth/auth.types";
+import { LoginRequest } from "../../../types/models/v1/auth/auth.types";
 
 const useQueryLogin = (data: LoginRequest) => {
   return useQuery({

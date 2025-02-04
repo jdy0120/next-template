@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import ReactQueryProvider from "../lib/providers/ReactQueryProvider";
-import EmotionTheme from "../lib/providers/EmotionTheme";
+import ReactQueryProvider from "../shared/providers/ReactQueryProvider";
+import EmotionTheme from "../shared/providers/EmotionTheme";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
-import RootStyleRegistry from "../lib/providers/RootStyleRegistry";
+import RootStyleRegistry from "../shared/providers/RootStyleRegistry";
 
 export const metadata: Metadata = {
   title: "Create Next App",

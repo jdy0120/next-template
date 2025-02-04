@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 import createNextIntlPlugin from "next-intl/plugin";
 
-const withNextIntl = createNextIntlPlugin();
+const withNextIntl = createNextIntlPlugin(
+  "./src/shared/libs/i18n/request.ts"
+);
 
 import dotenv from "dotenv";
 
